@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito|Ranga');
+$main-color: #F68040;
+$second-color: #E9A553;
+$third-color: #D7B377;
+$text-color: #8F754F;
+$note-back: #FFF6A7;
+
+body{
+  font-family:'Nunito', serif;
+}
+
+.header, .footer {
+  background-color: $main-color;
+  color:#fff;
+  font-family: 'Ranga', cursive; 
+}
+
+.header {
+  height: 50px;
+  padding: 5px 0 0 10px;
+  margin-bottom: 2vh;
+}
+
+.footer {
+  height: 40px;
+  padding: 5px 0 0 10px;
+  margin-top: 3vh;
+  .about {
+    margin: 5px auto 0;
+  }
+}
+
+.btn-warning {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 3em;
+  line-height: 0.80;
+  display:block;    
+  border: 1px solid #ffff;
+  border-radius: 50%;  
+  text-decoration:none;
+  font-weight:bold;
+}
+
+form {
+  width: 50%;
+  border: 1px solid $second-color;
+  margin: 2vh auto 2vh;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: $third-color;
+  color: $text-color;
+  font-family: 'Nunito', sans-serif;   
+  textarea {
+    width:100%;
+    overflow: auto;
+    border-radius: 5px;
+    outline: 0 none;
+  }
+  button {
+    width: 75px;
+    height:35px;
+    text-align: center;  
+    border: 0px solid $second-color;
+    color: #FFF;
+    background-color: $second-color;
+    border-radius: 2px;  
+    margin-right: 10px;
+    text-decoration:none;
+    transition: background .15s ease-in, transform .25s ease-in-out;   
+  }
+  @media screen and (max-width: 580px) {
+     width: 95%;
+  }
+}
+
+button:active, button:hover, button:focus  {
+  outline:0;
+  cursor: pointer;
+  background: rgba(255,142,69,0.5);	
+  transform: scale(1.07);   
+}
+
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
+    border-color: rgba(229, 103, 23, 0.8);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
+    outline: 0 none;
+}
+
+.note {
+  display: inline-block;  
+  background-color: transparent;  
+  padding: 5px;   
+  font-family: 'Nunito', sans-serif;  
+  .inner {
+    background-color: $note-back;
+    padding: 5px;
+    border-radius: 5px;
+    height: 230px;
+    color: $text-color;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .title {
+    background-color: #FFF275;
+    padding: 1px;
+    height: 45px;
+    h2 {
+      display: inline-block;
+    }     
+  }  
+  .btn {
+      background-color: #58A33A;
+      color: #FFF;
+      margin: 1px 0px 1px 5px;
+      float: right;
+    }
+  .del {
+    background-color: #DD4B1A;
+  }
+  .save {
+    background-color: $second-color;
+  }
+  input, textarea {
+    margin: 1px;
+    width: 100%;
+    border-radius: 5px;
+  }  
+  span {  
+    padding-left: 15px;
+  }
+
+}
